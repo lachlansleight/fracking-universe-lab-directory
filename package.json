@@ -1,0 +1,57 @@
+{
+    "name": "fracking-universe-recipes",
+    "author": "@lachlansleight",
+    "license": "MIT",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "type-check": "tsc --pretty --noEmit",
+        "format": "prettier --write .",
+        "lint": "eslint . --ext ts --ext tsx --ext js",
+        "test": "jest",
+        "test-all": "yarn lint && yarn type-check && yarn test"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "pre-push": "yarn run type-check"
+        }
+    },
+    "lint-staged": {
+        "*.@(ts|tsx)": [
+            "yarn lint",
+            "yarn format"
+        ]
+    },
+    "dependencies": {
+        "axios": "^0.21.4",
+        "next": "latest",
+        "react": "latest",
+        "react-dom": "latest",
+        "react-icons": "latest"
+    },
+    "devDependencies": {
+        "@testing-library/react": "latest",
+        "@types/jest": "latest",
+        "@types/node": "latest",
+        "@types/react": "latest",
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/parser": "latest",
+        "autoprefixer": "latest",
+        "babel-jest": "latest",
+        "babel-plugin-macros": "latest",
+        "eslint": "latest",
+        "eslint-config-prettier": "latest",
+        "eslint-plugin-react": "latest",
+        "identity-obj-proxy": "latest",
+        "jest": "latest",
+        "jest-watch-typeahead": "latest",
+        "lint-staged": "latest",
+        "postcss": "latest",
+        "prettier": "latest",
+        "tailwindcss": "latest",
+        "typescript": "latest"
+    }
+}
