@@ -11,10 +11,20 @@ module.exports = {
                 main: `calc(100vh - ${theme("height.header")} - ${theme("height.footer")})`,
                 48: "12rem",
             }),
+            fontFamily: {
+                pixel: ["hobo", "vt323"],
+            },
+            textShadow: {
+                hard: "2px 2px 0px #000",
+            },
         },
     },
     variants: {
+        imageRendering: ["responsive"],
         extend: {},
     },
-    plugins: [],
+    plugins: [
+        require("tailwindcss-image-rendering")(), // no options to configure
+        require("tailwindcss-textshadow"),
+    ],
 };

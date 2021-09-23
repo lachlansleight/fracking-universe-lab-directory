@@ -1,0 +1,385 @@
+[
+    {
+        "itemName": "liquidalienjuice",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidalienjuiceicon.png",
+        "shortdescription": "Plasmic Fluid",
+        "description": "A measure of an unusual plasmic fluid.\n^yellow;Centrifugable^reset;.",
+        "liquid": "alienjuice"
+    },
+    {
+        "itemName": "liquiddarkwater",
+        "rarity": "Uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquiddarkwatericon.png",
+        "shortdescription": "Dark Water",
+        "description": "D2OAs. Nearly identical in nature to heavy water, but with high concentrations of arsenic.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "darkwater"
+    },
+    {
+        "itemName": "ff_mercury",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "ff_mercury.png",
+        "description": "Mercury is the only metal that is liquid at standard temperatures and pressures. Caution: Toxic\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "shortdescription": "Mercury",
+        "liquid": "mercuryliquid"
+    },
+    {
+        "itemName": "fusaltwater",
+        "rarity": "common",
+        "category": "liquid",
+        "inventoryIcon": "liquidwatericon.png",
+        "shortdescription": "Salt Water",
+        "description": "A measure of salt water.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "fusaltwater"
+    },
+    {
+        "itemName": "fu_honeyice",
+        "category": "liquid",
+        "rarity": "Common",
+        "price": 0,
+        "inventoryIcon": "fu_honeyiceicon.png",
+        "shortdescription": "Frozen Honey",
+        "description": "A measure of icy honey that is somehow in a perpetual liquid state. Cold to the touch.\n^yellow;Centrifugable^reset;.",
+        "liquid": "fuhoneyice"
+    },
+    {
+        "itemName": "fu_honeyspirit",
+        "category": "liquid",
+        "rarity": "Common",
+        "price": 0,
+        "inventoryIcon": "fu_honeyspiriticon.png",
+        "shortdescription": "Exspiravit Honey",
+        "description": "A measure of semi-transparent, white-hued honey. Known to be a potent hallucinogen.\n^yellow;Centrifugable^reset;.",
+        "liquid": "fuhoneyspirit"
+    },
+    {
+        "itemName": "fu_liquidhoney",
+        "category": "liquid",
+        "rarity": "Common",
+        "price": 0,
+        "inventoryIcon": "fu_liquidhoneyicon.png",
+        "shortdescription": "Pure Honey",
+        "description": "A measure of sweet, sweet honey.\n^yellow;Centrifugable^reset;.",
+        "liquid": "fuhoney"
+    },
+    {
+        "itemName": "fu_liquidhoneyred",
+        "category": "liquid",
+        "rarity": "uncommon",
+        "price": 0,
+        "inventoryIcon": "fu_liquidhoneyredicon.png",
+        "shortdescription": "Crimson Honey",
+        "description": "Sickeningly sweet honey that contains nearly-microscopic meat and flesh particles in great abundance.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "fuhoneyred"
+    },
+    {
+        "itemName": "liquidhealing",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidhealingicon.png",
+        "shortdescription": "Healing Water",
+        "description": "A measure of cool, clear, healing water. Drinking it will restore your body.",
+        "liquid": "healingliquid",
+        "learnBlueprintsOnPickup": ["bottledhealingwater"]
+    },
+    {
+        "itemName": "helium3gasliquid",
+        "rarity": "uncommon",
+        "category": "liquid",
+        "inventoryIcon": "helium3gasliquid.png",
+        "shortdescription": "Helium-3",
+        "description": "Exceptional in nuclear applications despite being non-radioactive.\n^yellow;Centrifugable^reset;.",
+        "liquid": "helium3gas"
+    },
+    {
+        "itemName": "liquidlava",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidlavaicon.png",
+        "shortdescription": "Lava",
+        "description": "A measure of bubbling, searing lava.",
+        "liquid": "lava"
+    },
+    {
+        "itemName": "liquidaether",
+        "rarity": "legendary",
+        "category": "liquid",
+        "inventoryIcon": "aethericon.png",
+        "shortdescription": "Aether",
+        "description": "A measure of liquid aether, a strange black liquid. Feels dry.\n^green;+^white;1 ^green;produce.\n^cyan;Uses -^white;0.5 ^cyan;fluid use ^gray;& ^cyan;-^white;1 ^cyan;seed use^reset;\n^yellow;Centrifugable^reset;.",
+        "liquid": "liquidaether"
+    },
+    {
+        "itemName": "liquidbeer",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidbeer.png",
+        "shortdescription": "Beer",
+        "description": "A holy liquid loved by even the Gods themselves.\n^green;Growth Rate x^white;2 ^gray;& ^green;+^white;1 ^green;produce.^reset;\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "tooltipKind": "food",
+        "liquid": "beer"
+    },
+    {
+        "itemName": "liquidbioooze",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidbiooozeicon.png",
+        "shortdescription": "Bio-Ooze",
+        "description": "A measure of bio-ooze.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "bio_ooze"
+    },
+    {
+        "itemName": "liquidblacktar",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidblacktaricon.png",
+        "shortdescription": "Black Tar",
+        "description": "A measure of viscous tar.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "blacktar"
+    },
+    {
+        "itemName": "liquidblood",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidbloodicon.png",
+        "shortdescription": "Blood",
+        "description": "A measure of blood.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "bloodliquid"
+    },
+    {
+        "itemName": "liquidcrystal",
+        "rarity": "Uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquidcrystalicon.png",
+        "shortdescription": "Liquified Crystal",
+        "description": "A measure of liquified crystals.\n^green;Growth Rate x^white;2.5 ^gray;& ^green;+^white;2 ^green;produce.\n^cyan;-^white;1 ^cyan;seed use^reset;\n^yellow;Centrifugable^reset;.",
+        "tooltipKind": "food",
+        "liquid": "crystalliquid"
+    },
+    {
+        "itemName": "liquiddeuterium",
+        "rarity": "legendary",
+        "liquidId": 67,
+        "category": "liquid",
+        "inventoryIcon": "liquiddeuteriumicon.png",
+        "shortdescription": "Liquid Deuterium",
+        "description": "A powerful cold-source and thus has many nuclear applications.\n^blue;+^white;5 ^blue;Fuel",
+        "fuelAmount": 5,
+        "liquid": "liquiddeuterium"
+    },
+    {
+        "itemName": "liquidelderfluid",
+        "rarity": "legendary",
+        "category": "liquid",
+        "inventoryIcon": "liquidelderfluid.png",
+        "shortdescription": "Essentia Obscura",
+        "description": "A measure of a strange, unidentifiable liquid.\n^green;Growth Rate x^white;1.5 ^gray;& ^green;+^white;2 ^green;produce.\n^cyan;-^white;1 ^cyan;seed use^reset;\n^yellow;Centrifugable^reset;.",
+        "liquid": "elderfluid"
+    },
+    {
+        "itemName": "liquidfuel",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidfuelicon.png",
+        "shortdescription": "Liquid Erchius Fuel",
+        "description": "A dangerous and volatile substance, syphoned from moons and used as FTL fuel.",
+        "liquid": "fuel",
+        "fuelAmount": 1,
+        "price": 1
+    },
+    {
+        "itemName": "liquidgravrain",
+        "rarity": "legendary",
+        "category": "liquid",
+        "inventoryIcon": "liquidgravrain.png",
+        "shortdescription": "Blue Grav-Liquid",
+        "description": "A measure of blue grav-liquid, manipulating gravity upon touch. How does this liquid even exist!?\n^yellow;Centrifugable^reset;.",
+        "liquid": "gravrain"
+    },
+    {
+        "itemName": "liquidironfu",
+        "rarity": "Uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquidironicon.png",
+        "shortdescription": "Liquid Iron",
+        "description": "Iron ^gray;Fe^reset; has a melting point of 1811K (1537C). Let that be a word of caution.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "fuironliquid"
+    },
+    {
+        "itemName": "liquidirradium",
+        "rarity": "rare",
+        "category": "liquid",
+        "inventoryIcon": "liquidirradiumicon.png",
+        "shortdescription": "Liquid Irradium",
+        "description": "A measure of liquid irradium.\n^blue;+^white;2 ^blue;Fuel\n^yellow;Centrifugable^reset;.",
+        "liquid": "irradiumliquid",
+        "fuelAmount": 2
+    },
+    {
+        "itemName": "liquidmechfuel",
+        "rarity": "uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquidmechfuelicon.png",
+        "shortdescription": "Refined Fuel",
+        "description": "An industrial-grade fuel obtained from refining lesser fuel using a catalyst.",
+        "liquid": "mechfuel"
+    },
+    {
+        "itemName": "liquidmercury",
+        "rarity": "uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquidmercuryicon.png",
+        "shortdescription": "Liquid Mercury",
+        "description": "A measure of Mercury ^gray;Hg^reset; in its most common state. Caution: Toxic",
+        "liquid": "mercuryliquid"
+    },
+    {
+        "itemName": "liquidmetallichydrogen",
+        "rarity": "legendary",
+        "category": "liquid",
+        "inventoryIcon": "liquidmetallichydrogen.png",
+        "description": "Manipulation of ZPE via ^blue;Arc^reset; tech has unlocked liquid state at STP!\n^blue;+^white;32 ^blue;Fuel",
+        "shortdescription": "Liquid Metallic Hydrogen",
+        "liquid": "metallichydrogenliquid",
+        "fuelAmount": 32
+    },
+    {
+        "itemName": "liquidnitrogenitem",
+        "rarity": "uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquidnitrogenitemicon.png",
+        "shortdescription": "Liquid Nitrogen",
+        "description": "A measure of nitrogen at temperatures at or below 77K. Proceed with care.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "liquidnitrogen"
+    },
+    {
+        "itemName": "liquidorangegravrain",
+        "rarity": "legendary",
+        "category": "liquid",
+        "inventoryIcon": "liquidorangegravrain.png",
+        "shortdescription": "Orange Grav-Liquid",
+        "description": "A measure of orange grav-liquid, manipulating gravity upon touch. How does this liquid even exist!?\n^yellow;Centrifugable^reset;.",
+        "liquid": "orangegravrain"
+    },
+    {
+        "itemName": "liquidorganicsoup",
+        "rarity": "uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquidorganicsoupicon.png",
+        "shortdescription": "Organic Soup",
+        "description": "A measure of organic soup.\n^green;Growth Rate x^white;1.5 ^gray;& ^green;+^white;2 ^green;produce.\n^cyan;-^white;1 ^cyan;seed use^reset;\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "tooltipKind": "food",
+        "liquid": "organicsoup"
+    },
+    {
+        "itemName": "liquidpus",
+        "rarity": "Uncommon",
+        "category": "liquid",
+        "inventoryIcon": "liquidpusicon.png",
+        "shortdescription": "Pus",
+        "description": "A measure of pus. This is absolutely disgusting.\n^green;Extractable^reset;, ^yellow;Centrifugable^reset;.",
+        "liquid": "pus"
+    },
+    {
+        "itemName": "liquidsulphuricacid",
+        "rarity": "rare",
+        "category": "liquid",
+        "inventoryIcon": "liquidsulphuricacidicon.png",
+        "shortdescription": "Sulphuric Acid",
+        "description": "Sulphuric Acid ^gray;H2SO4^reset; is one of the strongest naturally occurring acids.\n^yellow;Centrifugable^reset;.",
+        "liquid": "sulphuricacid"
+    },
+    {
+        "itemName": "liquidwastewater",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidwastewater.png",
+        "shortdescription": "Contaminated Water",
+        "description": "A measure of filthy, brackish water.\n^yellow;Centrifugable^reset;.",
+        "liquid": "wastewater"
+    },
+    {
+        "itemName": "liquidmilk",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidmilkicon.png",
+        "shortdescription": "Coconut Milk",
+        "description": "A measure of coconut milk. The taste is amazing.",
+        "liquid": "milk"
+    },
+    {
+        "itemName": "liquidoil",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidoilicon.png",
+        "shortdescription": "Oil",
+        "description": "A measure of gooey unrefined oil.",
+        "liquid": "tarliquid"
+    },
+    {
+        "itemName": "liquidpoison",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidpoisonicon.png",
+        "shortdescription": "Poison",
+        "description": "A measure of strong poison.",
+        "liquid": "poison"
+    },
+    {
+        "itemName": "shadowgasliquid",
+        "rarity": "rare",
+        "category": "liquid",
+        "inventoryIcon": "shadowgasliquid.png",
+        "shortdescription": "Caliginous Gas",
+        "description": "WF6CF4Po. Able to absorb light and alter gravitic force through unusual carbon nanotube formations. Toxic.\n^yellow;Centrifugable^reset;.",
+        "liquid": "shadowgas"
+    },
+    {
+        "itemName": "liquidslime",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidslimeicon.png",
+        "shortdescription": "Slime",
+        "description": "A slimey liquid.",
+        "liquid": "slimeliquid"
+    },
+    {
+        "itemName": "swampwater",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "swampwatericon.png",
+        "shortdescription": "Swamp Water",
+        "description": "A measure of dirty swamp water.",
+        "liquid": "swampwater"
+    },
+    {
+        "itemName": "unrefinedliquidmechfuel",
+        "rarity": "uncommon",
+        "category": "liquid",
+        "inventoryIcon": "unrefinedliquidmechfuelicon.png",
+        "shortdescription": "Unrefined Fuel",
+        "description": "Unrefined fuel modified from oil. If exposed to air, it reverts to oil.",
+        "liquid": "tarliquid"
+    },
+    {
+        "itemName": "vialproto",
+        "rarity": "uncommon",
+        "category": "liquid",
+        "inventoryIcon": "vialprotoicon.png",
+        "shortdescription": "Liquid Protocite",
+        "description": "A measure of liquid protocite.\n^yellow;Centrifugable^reset;.",
+        "liquid": "protociteliquid"
+    },
+    {
+        "itemName": "liquidwater",
+        "rarity": "Common",
+        "category": "liquid",
+        "inventoryIcon": "liquidwatericon.png",
+        "shortdescription": "Water",
+        "description": "A measure of cool, clear water.",
+        "liquid": "water"
+    }
+]

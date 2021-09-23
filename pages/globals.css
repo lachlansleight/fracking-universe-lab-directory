@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "hobo";
+    src: url("/font/hobo.woff") format("woff");
+}
+
 @tailwind base;
 @tailwind components;
 
