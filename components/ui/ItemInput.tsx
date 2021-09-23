@@ -67,7 +67,7 @@ const ItemInput = ({
                     </li>
                 );
             })
-            .slice(0, 10);
+            .slice(0, 20);
     };
 
     return (
