@@ -57,8 +57,10 @@ const SmeltingOutputs = ({
     recipe: SmeltingRecipe;
     allItems: FuItem[];
 }) => {
-    const mainOutput = recipe.output ? allItems.find(i => i.itemName === recipe.output) : undefined;
-    if (!mainOutput) throw new Error("Didn't find an item of name " + recipe.output);
+    const mainOutput =
+        recipe.output && recipe.output !== ""
+            ? allItems.find(i => i.itemName === recipe.output)
+            : undefined;
 
     return (
         <div className="border border-black rounded bg-black bg-opacity-10">
@@ -88,7 +90,26 @@ const SmeltingOutputs = ({
                     .sort((a, b) => b.chance - a.chance)
                     .map(output => {
                         const item = allItems.find(i => i.itemName === output.item);
-                        if (!item) throw new Error("Didn't find item with name " + output.item);
+                        if (!item)
+                            return (
+                                <li
+                                    key={station + "_" + output.item}
+                                    className="flex flex-row items-center gap-2"
+                                >
+                                    <div className="w-8 h-8 grid place-items-center bg-red-800 rounded text-black font-pixel p-0 relative">
+                                        <span className="text-white text-shadow-hard text-2xl relative left-0.5 top-0.5">
+                                            !
+                                        </span>
+                                    </div>
+                                    <h3 className="font-pixel">{output.item}</h3>
+                                    <h3 className="font-pixel">
+                                        {output.chance < 0.001
+                                            ? Math.round(output.chance * 10000) / 100
+                                            : Math.round(output.chance * 1000) / 10}
+                                        %
+                                    </h3>
+                                </li>
+                            );
                         return (
                             <li
                                 key={station + "_" + output.item}
@@ -97,7 +118,10 @@ const SmeltingOutputs = ({
                                 <ItemIcon item={item} border={true} className="w-8 h-8" />
                                 <h3 className="font-pixel">{item.shortDescription}</h3>
                                 <h3 className="font-pixel">
-                                    {Math.round(output.chance * 1000) / 10}%
+                                    {output.chance < 0.001
+                                        ? Math.round(output.chance * 10000) / 100
+                                        : Math.round(output.chance * 1000) / 10}
+                                    %
                                 </h3>
                             </li>
                         );

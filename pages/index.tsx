@@ -16,7 +16,28 @@ export const Home = (): JSX.Element => {
     const [items, setItems] = useState<FuItem[]>([]);
     const [selectedItem, setSelectedItem] = useState<FuItem>();
     const [asInputs, setAsInputs] = useState<any>({});
-    const [asOutputs, setAsOutputs] = useState<any>({});
+    const [centrifuge, setCentrifuge] = useState<
+        | "woodenCentrifuge"
+        | "ironCentrifuge"
+        | "industrialCentrifuge"
+        | "labCentrifuge"
+        | "gasCentrifuge"
+    >("gasCentrifuge");
+    const [sifter, setSifter] = useState<"woodenSifter" | "powderSifter">("powderSifter");
+    const [crusher, setCrusher] = useState<"rockBreaker" | "rockCrusher">("rockCrusher");
+    const [extractor, setExtractor] = useState<
+        "handMill" | "extractionLab" | "advancedExtractionLab"
+    >("advancedExtractionLab");
+    const [smelter, setSmelter] = useState<"electricFurnace" | "blastFurnace" | "arcSmelter">(
+        "arcSmelter"
+    );
+    const [asOutputs, setAsOutputs] = useState<any>({
+        centrifuge: {},
+        sifter: {},
+        crusher: {},
+        extractor: {},
+        smelter: {},
+    });
 
     useEffect(() => {
         const loadAll = async () => {
@@ -70,7 +91,167 @@ export const Home = (): JSX.Element => {
         if (data.arcSmelter[selectedItem.itemName])
             asInput.arcSmelter = data.arcSmelter[selectedItem.itemName];
         setAsInputs(asInput);
-    }, [selectedItem, data]);
+
+        const asOutput: any = {
+            centrifuge: {},
+            sifter: {},
+            crusher: {},
+            extractor: {},
+            smelter: {},
+        };
+        switch (centrifuge) {
+            case "woodenCentrifuge":
+                Object.keys(data.woodenCentrifuge)
+                    .filter(key => {
+                        return !!data.woodenCentrifuge[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.centrifuge[key] = data.woodenCentrifuge[key]));
+                break;
+            case "ironCentrifuge":
+                Object.keys(data.ironCentrifuge)
+                    .filter(key => {
+                        return !!data.ironCentrifuge[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.centrifuge[key] = data.ironCentrifuge[key]));
+                break;
+            case "industrialCentrifuge":
+                Object.keys(data.industrialCentrifuge)
+                    .filter(key => {
+                        return !!data.industrialCentrifuge[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.centrifuge[key] = data.industrialCentrifuge[key]));
+                break;
+            case "labCentrifuge":
+                Object.keys(data.labCentrifuge)
+                    .filter(key => {
+                        return !!data.labCentrifuge[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.centrifuge[key] = data.labCentrifuge[key]));
+                break;
+            case "gasCentrifuge":
+                Object.keys(data.gasCentrifuge)
+                    .filter(key => {
+                        return !!data.gasCentrifuge[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.centrifuge[key] = data.gasCentrifuge[key]));
+                break;
+        }
+        switch (sifter) {
+            case "woodenSifter":
+                Object.keys(data.woodenSifter)
+                    .filter(key => {
+                        return !!data.woodenSifter[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.sifter[key] = data.woodenSifter[key]));
+                break;
+            case "powderSifter":
+                Object.keys(data.powderSifter)
+                    .filter(key => {
+                        return !!data.powderSifter[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.sifter[key] = data.powderSifter[key]));
+                break;
+        }
+        switch (crusher) {
+            case "rockBreaker":
+                Object.keys(data.rockBreaker)
+                    .filter(key => {
+                        return !!data.rockBreaker[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.crusher[key] = data.rockBreaker[key]));
+                break;
+            case "rockCrusher":
+                Object.keys(data.rockCrusher)
+                    .filter(key => {
+                        return !!data.rockCrusher[key]?.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.crusher[key] = data.rockCrusher[key]));
+                break;
+        }
+        switch (extractor) {
+            case "handMill":
+                Object.keys(data.handMill)
+                    .filter(key => {
+                        return !!data.handMill[key]?.outputs.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.extractor[key] = data.handMill[key]));
+                break;
+            case "extractionLab":
+                Object.keys(data.extractionLab)
+                    .filter(key => {
+                        return !!data.extractionLab[key]?.outputs.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.extractor[key] = data.extractionLab[key]));
+                break;
+            case "advancedExtractionLab":
+                Object.keys(data.advancedExtractionLab)
+                    .filter(key => {
+                        return !!data.advancedExtractionLab[key]?.outputs.find(
+                            output => output.item === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.extractor[key] = data.advancedExtractionLab[key]));
+                break;
+        }
+        switch (smelter) {
+            case "electricFurnace":
+                Object.keys(data.electricFurnace)
+                    .filter(key => {
+                        return (
+                            !!data.electricFurnace[key]?.bonusOutputs.find(
+                                output => output.item === selectedItem.itemName
+                            ) || data.electricFurnace[key]?.output === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.smelter[key] = data.electricFurnace[key]));
+                break;
+            case "blastFurnace":
+                Object.keys(data.blastFurnace)
+                    .filter(key => {
+                        return (
+                            !!data.blastFurnace[key]?.bonusOutputs.find(
+                                output => output.item === selectedItem.itemName
+                            ) || data.blastFurnace[key]?.output === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.smelter[key] = data.blastFurnace[key]));
+                break;
+            case "arcSmelter":
+                Object.keys(data.arcSmelter)
+                    .filter(key => {
+                        return (
+                            !!data.arcSmelter[key]?.bonusOutputs.find(
+                                output => output.item === selectedItem.itemName
+                            ) || data.arcSmelter[key]?.output === selectedItem.itemName
+                        );
+                    })
+                    .forEach(key => (asOutput.smelter[key] = data.arcSmelter[key]));
+                break;
+        }
+        setAsOutputs(asOutput);
+    }, [selectedItem, data, centrifuge, sifter, crusher, extractor, smelter]);
 
     if (loading)
         return (
@@ -79,11 +260,8 @@ export const Home = (): JSX.Element => {
             </Layout>
         );
 
-    console.log(data);
-
     return (
         <Layout>
-            <h1 className="text-2xl font-pixel">Fracking Universe Lab Directory</h1>
             <div className="flex gap-4 items-center my-4">
                 <ItemIcon item={selectedItem || items[0]} border={true} className="w-12 h-12" />
                 <ItemInput
@@ -97,13 +275,20 @@ export const Home = (): JSX.Element => {
             </div>
             {selectedItem && (
                 <>
-                    <Item item={selectedItem} />
-                    {asInputs === {} ? (
+                    {selectedItem.shortDescription === "..." ? (
                         <div>
-                            <h2 className="text-2xl font-pixel">No inputs</h2>
+                            <p className="font-pixel text-2xl text-center mt-8 text-shadow-hard">
+                                Enter an item to get started
+                            </p>
                         </div>
                     ) : (
+                        <Item item={selectedItem} />
+                    )}
+                    {Object.keys(asInputs).length === 0 ? null : (
                         <div className="flex flex-col gap-4 mt-4">
+                            <h1 className="font-pixel border-t border-b w-full bg-black bg-opacity-10 text-4xl px-4 py-2">
+                                As Input
+                            </h1>
                             {(asInputs.woodenCentrifuge ||
                                 asInputs.ironCentrifuge ||
                                 asInputs.industrialCentrifuge ||
@@ -252,6 +437,99 @@ export const Home = (): JSX.Element => {
                                     )}
                                 </div>
                             )}
+                        </div>
+                    )}
+
+                    {Object.keys(asOutputs.centrifuge).length +
+                        Object.keys(asOutputs.sifter).length +
+                        Object.keys(asOutputs.crusher).length +
+                        Object.keys(asOutputs.extractor).length +
+                        Object.keys(asOutputs.smelter).length >
+                        0 && (
+                        <div className="flex flex-col gap-4 mt-8">
+                            <h1 className="font-pix`el border-t border-b w-full bg-black bg-opacity-10 text-4xl px-4 py-2">
+                                As Output
+                            </h1>
+                            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {asOutputs.centrifuge &&
+                                    Object.keys(asOutputs.centrifuge).map(itemName => {
+                                        const item = items.find(i => i.itemName === itemName);
+                                        if (!item) return null;
+                                        return (
+                                            <CentrifugeOutputs
+                                                key={centrifuge + "_" + item.itemName}
+                                                input={item}
+                                                station={centrifuge}
+                                                outputs={asOutputs.centrifuge[itemName]}
+                                                allItems={items}
+                                            />
+                                        );
+                                    })}
+                            </ul>
+                            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {asOutputs.sifter &&
+                                    Object.keys(asOutputs.sifter).map(itemName => {
+                                        const item = items.find(i => i.itemName === itemName);
+                                        if (!item) return null;
+                                        return (
+                                            <CentrifugeOutputs
+                                                key={sifter + "_" + item.itemName}
+                                                input={item}
+                                                station={sifter}
+                                                outputs={asOutputs.sifter[itemName]}
+                                                allItems={items}
+                                            />
+                                        );
+                                    })}
+                            </ul>
+                            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {asOutputs.crusher &&
+                                    Object.keys(asOutputs.crusher).map(itemName => {
+                                        const item = items.find(i => i.itemName === itemName);
+                                        if (!item) return null;
+                                        return (
+                                            <CentrifugeOutputs
+                                                key={crusher + "_" + item.itemName}
+                                                input={item}
+                                                station={crusher}
+                                                outputs={asOutputs.crusher[itemName]}
+                                                allItems={items}
+                                            />
+                                        );
+                                    })}
+                            </ul>
+                            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {asOutputs.extractor &&
+                                    Object.keys(asOutputs.extractor).map(itemName => {
+                                        const item = items.find(i => i.itemName === itemName);
+                                        if (!item) return null;
+                                        return (
+                                            <ExtractionOutputs
+                                                key={crusher + "_" + item.itemName}
+                                                input={item}
+                                                station={extractor}
+                                                recipe={asOutputs.extractor[itemName]}
+                                                allItems={items}
+                                            />
+                                        );
+                                    })}
+                            </ul>
+                            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {asOutputs.smelter &&
+                                    Object.keys(asOutputs.smelter).map(itemName => {
+                                        const item = items.find(i => i.itemName === itemName);
+                                        if (!item) return null;
+                                        return (
+                                            <SmeltingOutputs
+                                                key={smelter + "_" + item.itemName}
+                                                input={item}
+                                                station={smelter}
+                                                recipe={asOutputs.smelter[itemName]}
+                                                allItems={items}
+                                            />
+                                        );
+                                    })}
+                            </ul>
                         </div>
                     )}
                 </>

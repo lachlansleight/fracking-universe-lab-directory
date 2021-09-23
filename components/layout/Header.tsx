@@ -1,11 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
-import { signIn, useSession } from "next-auth/client";
 import { FaBars } from "react-icons/fa";
 
-const linkClass = "text-white";
-const activeLinkClass = "text-green-300";
+const linkClass = "text-white font-pixel";
+const activeLinkClass = "text-green-300 font-pixel";
 
 const Header = ({ pathName = "/" }: { pathName?: string }) => {
     const headerRef = useRef<HTMLElement>(null);
@@ -45,7 +44,9 @@ const Header = ({ pathName = "/" }: { pathName?: string }) => {
         >
             <Link href="/">
                 <a className="flex flex-row items-center">
-                    <span className="ml-3 text-xl font-bold text-white">NextJS Template</span>
+                    <span className="ml-3 text-xl text-white font-pixel text-shadow-hard">
+                        Fracking Universe - Lab Directory
+                    </span>
                 </a>
             </Link>
             <button
@@ -58,23 +59,14 @@ const Header = ({ pathName = "/" }: { pathName?: string }) => {
             <nav
                 className={`${
                     menuOpen ? "flex" : "hidden"
-                } absolute md:relative top-12 left-0 md:top-0 z-20 flex-col md:flex-row md:space-x-6 font-semibold w-full md:w-auto bg-gray-700 md:bg-transparent p-4 md:p-0 shadow-lg md:shadow-none `}
+                } absolute md:relative top-12 left-0 md:top-0 z-20 flex-col md:flex-row md:space-x-6 text-shadow-hard w-full md:w-auto bg-gray-700 md:bg-transparent p-4 md:p-0 shadow-lg md:shadow-none `}
             >
                 <Link href="/">
                     <a className={`${linkClass} ${pathName === "/" ? activeLinkClass : null}`}>
                         Home
                     </a>
                 </Link>
-                <Link href="/page">
-                    <a
-                        className={`${linkClass} ${
-                            pathName.includes("page") ? activeLinkClass : null
-                        }`}
-                    >
-                        Page
-                    </a>
-                </Link>
-                <span className="hidden md:block text-gray-700">|</span>
+                {/* <span className="hidden md:block text-gray-700">|</span>
                 <hr className="block md:hidden my-2" />
                 <Link href="/otherpage">
                     <a
@@ -84,7 +76,7 @@ const Header = ({ pathName = "/" }: { pathName?: string }) => {
                     >
                         Other Page
                     </a>
-                </Link>
+                </Link> */}
             </nav>
         </header>
     );

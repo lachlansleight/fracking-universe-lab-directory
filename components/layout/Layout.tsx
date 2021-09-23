@@ -19,7 +19,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             </main>
             <footer className="px-4 flex items-center h-footer bg-gray-800 text-gray-200">
                 <div className="container mx-auto flex justify-between">
-                    <p>&copy; Somebody 2021</p>
+                    <p>&copy; Lachlan Sleight 2021</p>
                     <p>v{packageJson.version}</p>
                 </div>
             </footer>

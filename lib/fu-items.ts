@@ -1,11 +1,12 @@
 import liquids from "./data/liquids.json";
 import materials from "./data/materials.json";
 import items from "./data/items.json";
+import currency from "./data/currency.json";
 
 export type FuItem = {
     itemName: string;
     itemType: "liquid" | "material" | "item";
-    rarity: "common" | "uncommon" | "rare" | "legendary";
+    rarity: "common" | "uncommon" | "rare" | "legendary" | "essential";
     icon: string;
     description: string;
     shortDescription: string;
@@ -32,5 +33,6 @@ export const getItems = (): FuItem[] => {
         ...liquids.map(item => formatItem(item, "liquid")),
         ...materials.map(item => formatItem(item, "material")),
         ...items.map(item => formatItem(item, "item")),
+        ...currency.map(item => formatItem(item, "currency")),
     ].sort((a, b) => a.shortDescription.localeCompare(b.shortDescription));
 };

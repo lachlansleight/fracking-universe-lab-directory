@@ -75,7 +75,21 @@ const ExtractionOutputs = ({
                     .sort((a, b) => b.count - a.count)
                     .map(output => {
                         const item = allItems.find(i => i.itemName === output.item);
-                        if (!item) throw new Error("Didn't find item with name " + output.item);
+                        if (!item)
+                            return (
+                                <li
+                                    key={station + "_" + output.item}
+                                    className="flex flex-row items-center gap-2"
+                                >
+                                    <div className="w-8 h-8 grid place-items-center bg-red-800 rounded text-black font-pixel p-0 relative">
+                                        <span className="text-white text-shadow-hard text-2xl relative left-0.5 top-0.5">
+                                            !
+                                        </span>
+                                    </div>
+                                    <h3 className="font-pixel">{output.item}</h3>
+                                    <h3 className="font-pixel">{output.count}</h3>
+                                </li>
+                            );
                         return (
                             <li
                                 key={station + "_" + output.item}

@@ -63,12 +63,36 @@ const CentrifugeOutputs = ({
                 <RawIcon url={getIcon(station)} className="w-12 h-12" />
                 <h2 className="font-pixel">{camelCaseToTitleCase(station)}</h2>
             </div>
+            <div className="p-4 flex items-center gap-2 bg-black bg-opacity-10 border-b border-black">
+                <h3 className="font-pixel">Input:</h3>
+                <ItemIcon item={input} border={true} className="w-8 h-8" />
+                <h3 className="font-pixel">{input.shortDescription} x 1</h3>
+            </div>
             <ul className="p-4 flex flex-col gap-2 bg-black bg-opacity-10">
                 {outputs
                     .sort((a, b) => b.chance - a.chance)
                     .map(output => {
                         const item = allItems.find(i => i.itemName === output.item);
-                        if (!item) throw new Error("Didn't find item with name " + output.item);
+                        if (!item)
+                            return (
+                                <li
+                                    key={station + "_" + output.item}
+                                    className="flex flex-row items-center gap-2"
+                                >
+                                    <div className="w-8 h-8 grid place-items-center bg-red-800 rounded text-black font-pixel p-0 relative">
+                                        <span className="text-white text-shadow-hard text-2xl relative left-0.5 top-0.5">
+                                            !
+                                        </span>
+                                    </div>
+                                    <h3 className="font-pixel">{output.item}</h3>
+                                    <h3 className="font-pixel">
+                                        {output.chance < 0.001
+                                            ? Math.round(output.chance * 10000) / 100
+                                            : Math.round(output.chance * 1000) / 10}
+                                        %
+                                    </h3>
+                                </li>
+                            );
                         return (
                             <li
                                 key={station + "_" + output.item}
@@ -77,7 +101,10 @@ const CentrifugeOutputs = ({
                                 <ItemIcon item={item} border={true} className="w-8 h-8" />
                                 <h3 className="font-pixel">{item.shortDescription}</h3>
                                 <h3 className="font-pixel">
-                                    {Math.round(output.chance * 1000) / 10}%
+                                    {output.chance < 0.001
+                                        ? Math.round(output.chance * 10000) / 100
+                                        : Math.round(output.chance * 1000) / 10}
+                                    %
                                 </h3>
                             </li>
                         );

@@ -195,7 +195,9 @@ const mapData = (data: any): FuData => {
         const outputItems = Object.keys(recipe.outputs);
         fuData.handMill[item] = {
             inputCount:
-                recipe.inputs[item].length === 1 ? recipe.inputs[item] : recipe.inputs[item][0],
+                recipe.inputs[item].length === 1 || typeof recipe.inputs[item] === "number"
+                    ? recipe.inputs[item]
+                    : recipe.inputs[item][0],
             outputs: outputItems.map(itemName => ({
                 item: itemName,
                 count: recipe.outputs[itemName][0],
@@ -205,7 +207,9 @@ const mapData = (data: any): FuData => {
 
         fuData.extractionLab[item] = {
             inputCount:
-                recipe.inputs[item].length === 1 ? recipe.inputs[item] : recipe.inputs[item][1],
+                recipe.inputs[item].length === 1 || typeof recipe.inputs[item] === "number"
+                    ? recipe.inputs[item]
+                    : recipe.inputs[item][1],
             outputs: outputItems.map(itemName => ({
                 item: itemName,
                 count: recipe.outputs[itemName][1],
@@ -215,7 +219,9 @@ const mapData = (data: any): FuData => {
 
         fuData.advancedExtractionLab[item] = {
             inputCount:
-                recipe.inputs[item].length === 1 ? recipe.inputs[item] : recipe.inputs[item][2],
+                recipe.inputs[item].length === 1 || typeof recipe.inputs[item] === "number"
+                    ? recipe.inputs[item]
+                    : recipe.inputs[item][2],
             outputs: outputItems.map(itemName => ({
                 item: itemName,
                 count: recipe.outputs[itemName][2],
