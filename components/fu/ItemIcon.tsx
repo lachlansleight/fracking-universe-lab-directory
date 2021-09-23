@@ -4,13 +4,15 @@ const ItemIcon = ({
     item,
     className,
     border,
+    onClick,
 }: {
     item: FuItem;
     className?: string;
     border?: boolean;
+    onClick?: (item: FuItem) => void;
 }): JSX.Element => {
     return (
-        <div className={`relative ${className || ""}`}>
+        <div className={`relative ${onClick ? "cursor-pointer" : ""} ${className || ""}`} onClick={onClick ? () => onClick(item) : undefined}>
             {border && (
                 <img
                     src={`/icons/generic/itemborder${item.rarity}.png`}

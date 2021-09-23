@@ -51,11 +51,13 @@ const SmeltingOutputs = ({
     station,
     recipe,
     allItems,
+    onItemClick,
 }: {
     input: FuItem;
     station: string;
     recipe: SmeltingRecipe;
     allItems: FuItem[];
+    onItemClick?: (item: FuItem) => void;
 }) => {
     const mainOutput =
         recipe.output && recipe.output !== ""
@@ -70,7 +72,7 @@ const SmeltingOutputs = ({
             </div>
             <div className="p-4 flex items-center gap-2 bg-black bg-opacity-10 border-b border-black">
                 <h3 className="font-pixel">Input:</h3>
-                <ItemIcon item={input} border={true} className="w-8 h-8" />
+                <ItemIcon item={input} border={true} className="w-8 h-8" onClick={onItemClick} />
                 <h3 className="font-pixel">
                     {input.shortDescription} x {recipe.inputCount}
                 </h3>
@@ -81,7 +83,7 @@ const SmeltingOutputs = ({
                         key={station + "_" + recipe.output}
                         className="flex flex-row items-center gap-2"
                     >
-                        <ItemIcon item={mainOutput} border={true} className="w-8 h-8" />
+                        <ItemIcon item={mainOutput} border={true} className="w-8 h-8" onClick={onItemClick} />
                         <h3 className="font-pixel">{mainOutput.shortDescription}</h3>
                         <h3 className="font-pixel">100%</h3>
                     </li>
@@ -115,7 +117,7 @@ const SmeltingOutputs = ({
                                 key={station + "_" + output.item}
                                 className="flex flex-row items-center gap-2"
                             >
-                                <ItemIcon item={item} border={true} className="w-8 h-8" />
+                                <ItemIcon item={item} border={true} className="w-8 h-8" onClick={onItemClick} />
                                 <h3 className="font-pixel">{item.shortDescription}</h3>
                                 <h3 className="font-pixel">
                                     {output.chance < 0.001

@@ -301,6 +301,7 @@ export const Home = (): JSX.Element => {
                                             station="woodenCentrifuge"
                                             outputs={asInputs.woodenCentrifuge}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.ironCentrifuge && (
@@ -309,6 +310,7 @@ export const Home = (): JSX.Element => {
                                             station="ironCentrifuge"
                                             outputs={asInputs.ironCentrifuge}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.industrialCentrifuge && (
@@ -317,6 +319,7 @@ export const Home = (): JSX.Element => {
                                             station="industrialCentrifuge"
                                             outputs={asInputs.industrialCentrifuge}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.labCentrifuge && (
@@ -325,6 +328,7 @@ export const Home = (): JSX.Element => {
                                             station="labCentrifuge"
                                             outputs={asInputs.labCentrifuge}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.gasCentrifuge && (
@@ -333,6 +337,7 @@ export const Home = (): JSX.Element => {
                                             station="gasCentrifuge"
                                             outputs={asInputs.gasCentrifuge}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                 </div>
@@ -345,6 +350,7 @@ export const Home = (): JSX.Element => {
                                             station="woodenSifter"
                                             outputs={asInputs.woodenSifter}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.powderSifter && (
@@ -353,6 +359,7 @@ export const Home = (): JSX.Element => {
                                             station="powderSifter"
                                             outputs={asInputs.powderSifter}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                 </div>
@@ -365,6 +372,7 @@ export const Home = (): JSX.Element => {
                                             station="rockBreaker"
                                             outputs={asInputs.rockBreaker}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.rockCrusher && (
@@ -373,6 +381,7 @@ export const Home = (): JSX.Element => {
                                             station="rockCrusher"
                                             outputs={asInputs.rockCrusher}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                 </div>
@@ -387,6 +396,7 @@ export const Home = (): JSX.Element => {
                                             station="handMill"
                                             recipe={asInputs.handMill}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.extractionLab && (
@@ -395,6 +405,7 @@ export const Home = (): JSX.Element => {
                                             station="extractionLab"
                                             recipe={asInputs.extractionLab}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.advancedExtractionLab && (
@@ -403,6 +414,7 @@ export const Home = (): JSX.Element => {
                                             station="advancedExtractionLab"
                                             recipe={asInputs.advancedExtractionLab}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                 </div>
@@ -417,6 +429,7 @@ export const Home = (): JSX.Element => {
                                             station="electricFurnace"
                                             recipe={asInputs.electricFurnace}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.blastFurnace && (
@@ -425,6 +438,7 @@ export const Home = (): JSX.Element => {
                                             station="blastFurnace"
                                             recipe={asInputs.blastFurnace}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                     {asInputs.arcSmelter && (
@@ -433,6 +447,7 @@ export const Home = (): JSX.Element => {
                                             station="arcSmelter"
                                             recipe={asInputs.arcSmelter}
                                             allItems={items}
+                                            onItemClick={setSelectedItem}
                                         />
                                     )}
                                 </div>
@@ -462,6 +477,7 @@ export const Home = (): JSX.Element => {
                                                 station={centrifuge}
                                                 outputs={asOutputs.centrifuge[itemName]}
                                                 allItems={items}
+                                                onItemClick={setSelectedItem}
                                             />
                                         );
                                     })}
@@ -478,6 +494,7 @@ export const Home = (): JSX.Element => {
                                                 station={sifter}
                                                 outputs={asOutputs.sifter[itemName]}
                                                 allItems={items}
+                                                onItemClick={setSelectedItem}
                                             />
                                         );
                                     })}
@@ -494,6 +511,7 @@ export const Home = (): JSX.Element => {
                                                 station={crusher}
                                                 outputs={asOutputs.crusher[itemName]}
                                                 allItems={items}
+                                                onItemClick={setSelectedItem}
                                             />
                                         );
                                     })}
@@ -510,6 +528,7 @@ export const Home = (): JSX.Element => {
                                                 station={extractor}
                                                 recipe={asOutputs.extractor[itemName]}
                                                 allItems={items}
+                                                onItemClick={setSelectedItem}
                                             />
                                         );
                                     })}
@@ -526,6 +545,7 @@ export const Home = (): JSX.Element => {
                                                 station={smelter}
                                                 recipe={asOutputs.smelter[itemName]}
                                                 allItems={items}
+                                                onItemClick={setSelectedItem}
                                             />
                                         );
                                     })}

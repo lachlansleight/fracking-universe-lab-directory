@@ -51,11 +51,13 @@ const ExtractionOutputs = ({
     station,
     recipe,
     allItems,
+    onItemClick,
 }: {
     input: FuItem;
     station: string;
     recipe: ExtractionRecipe;
     allItems: FuItem[];
+    onItemClick?: (item: FuItem) => void;
 }) => {
     return (
         <div className="border border-black rounded bg-black bg-opacity-10">
@@ -65,7 +67,7 @@ const ExtractionOutputs = ({
             </div>
             <div className="p-4 flex items-center gap-2 bg-black bg-opacity-10 border-b border-black">
                 <h3 className="font-pixel">Input:</h3>
-                <ItemIcon item={input} border={true} className="w-8 h-8" />
+                <ItemIcon item={input} border={true} className="w-8 h-8" onClick={onItemClick} />
                 <h3 className="font-pixel">
                     {input.shortDescription} x {recipe.inputCount || 1}
                 </h3>
@@ -95,7 +97,7 @@ const ExtractionOutputs = ({
                                 key={station + "_" + output.item}
                                 className="flex flex-row items-center gap-2"
                             >
-                                <ItemIcon item={item} border={true} className="w-8 h-8" />
+                                <ItemIcon item={item} border={true} className="w-8 h-8" onClick={onItemClick} />
                                 <h3 className="font-pixel">{item.shortDescription}</h3>
                                 <h3 className="font-pixel">x {output.count || 1}</h3>
                             </li>

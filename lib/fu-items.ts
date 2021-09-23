@@ -5,14 +5,14 @@ import currency from "./data/currency.json";
 
 export type FuItem = {
     itemName: string;
-    itemType: "liquid" | "material" | "item";
+    itemType: "liquid" | "material" | "item" | "currency";
     rarity: "common" | "uncommon" | "rare" | "legendary" | "essential";
     icon: string;
     description: string;
     shortDescription: string;
 };
 
-const formatItem = (item: any, type: "liquid" | "material" | "item"): FuItem => {
+const formatItem = (item: any, type: "liquid" | "material" | "item" | "currency"): FuItem => {
     const shortDescriptionPieces = item.shortdescription.split(";");
     const output: FuItem = {
         itemName: item.itemName,
