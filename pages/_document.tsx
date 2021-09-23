@@ -6,7 +6,7 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <link rel="preload" href="/font/hobo.woff" as="font" crossOrigin="" />
-                    <title>Fracking Universe Lab Directory</title>
+                    <title>Frackin Universe Lab Directory</title>
                 </Head>
                 <body>
                     <Main />

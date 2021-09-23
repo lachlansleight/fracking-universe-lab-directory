@@ -45,7 +45,7 @@ const Header = ({ pathName = "/" }: { pathName?: string }) => {
             <Link href="/">
                 <a className="flex flex-row items-center">
                     <span className="ml-3 text-xl text-white font-pixel text-shadow-hard">
-                        Fracking Universe - Lab Directory
+                        Frackin Universe - Lab Directory
                     </span>
                 </a>
             </Link>
